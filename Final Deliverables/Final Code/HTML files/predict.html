@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == "Chronic Kidney Disease-Detected!!" %}
+                <div class="jumbotron ">
+  <b><h1 class="display-4">Chronic Kidney Disease-Detected!!</h1></b>
+  <p class="lead">Please Consult a Doctor and make sure of health in your diet.</p>
+  <hr class="my-4">
+  <b><p>Doctor Consultation Needed.</p></b>
+  
+</div>
+            {% else %}
+                <div class="jumbotron">
+  <b><h1 class="display-4">Great! You are Healthy</h1></b>
+  <p class="lead">You are Absolutely Alright ! There is no Marks for Kidney Disease. Enjoy life with full of Happiness.</p>
+  <hr class="my-4">
+  <b><p>Stay fit as you are. Nothing is important than your health.</p></b>
+  
+</div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}
